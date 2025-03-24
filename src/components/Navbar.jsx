@@ -13,11 +13,15 @@ const Navbar = () => {
         {pageLinks.map((link, idx) => (
           <li key={idx}>
             <NavLink
-              className={({ isActive }) => (isActive ? "py-1 font-semibold border-b-2 text-blue-400" : "font-semibold")}
               to={`/${link
                 .toLowerCase()
                 .replaceAll(" ", "-")
                 .replace("home", "")}`}
+              className={({ isActive }) =>
+                isActive
+                  ? "py-1 px-1.5 font-semibold border-b-2 text-blue-400"
+                  : "px-1.5 font-semibold"
+              }
             >
               {link}
             </NavLink>
