@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
 import { Link, NavLink } from "react-router";
 
-const pageLinks = ["Home", "All Blogs", "Add Blog"];
+const pageLinks = ["Home", "All Blogs", "Add Blog", "Featured Blogs", "Wishlist"];
 
 const Navbar = () => {
   return (

@@ -7,6 +7,8 @@ import HomePage from "./pages/HomePage.jsx";
 import AddBlogPage from "./pages/AddBlogPage.jsx";
 import AllBlogsPage from "./pages/AllBlogsPage.jsx";
 import AuthProvider from "./providers/AuthProvider.jsx";
+import FeaturedBlogsPage from "./pages/FeaturedBlogsPage.jsx";
+import WishlistPage from "./pages/WishlistPage.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -17,6 +19,8 @@ createRoot(document.getElementById("root")).render(
             <Route index element={<HomePage />} />
             <Route path="/add-blog" element={<AddBlogPage />} />
             <Route path="/all-blogs" element={<AllBlogsPage />} />
+            <Route path="/featured-blogs" element={<FeaturedBlogsPage />} />
+            <Route path="/wishlist" element={<WishlistPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

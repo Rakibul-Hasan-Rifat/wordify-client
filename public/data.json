@@ -1,0 +1,309 @@
+[
+  {
+    "title": "Authentic Italian Pasta Dishes",
+    "description": "Learn to make classic Italian pasta recipes from scratch.",
+    "category": "Italian Cuisine",
+    "price": 18.5,
+    "difficulty": "Beginner",
+    "prep_time": "30-60 mins",
+    "rating": 4.6,
+    "recipes_count": 32,
+    "ingredients_used": ["Pasta", "Tomatoes", "Basil", "Parmesan"],
+    "popular_recipes": [
+      "Spaghetti Carbonara",
+      "Fettuccine Alfredo",
+      "Penne Arrabbiata"
+    ],
+    "reviews": [
+      {
+        "user": "PastaLover",
+        "comment": "Simple yet delicious recipes!",
+        "rating": 4.8
+      }
+    ],
+    "chef": {
+      "name": "Marco Bianchi",
+      "experience": "8 years",
+      "specialty": "Italian cuisine",
+      "awards": ["Italian Chef of the Year 2022"]
+    },
+    "url": "https://example.com/italian-pasta-recipes"
+  },
+  {
+    "title": "Japanese Sushi Masterclass",
+    "description": "Step-by-step guide to making perfect sushi at home.",
+    "category": "Asian Cuisine",
+    "price": 25.0,
+    "difficulty": "Advanced",
+    "prep_time": "60-120 mins",
+    "rating": 4.9,
+    "recipes_count": 28,
+    "ingredients_used": ["Sushi Rice", "Nori", "Fresh Fish", "Wasabi"],
+    "popular_recipes": ["California Roll", "Nigiri", "Dragon Roll"],
+    "reviews": [
+      {
+        "user": "SushiFan",
+        "comment": "Best sushi tutorial I've found!",
+        "rating": 5
+      }
+    ],
+    "chef": {
+      "name": "Kenji Yamamoto",
+      "experience": "15 years",
+      "specialty": "Japanese cuisine",
+      "awards": ["Master Sushi Chef"]
+    },
+    "url": "https://example.com/sushi-masterclass"
+  },
+  {
+    "title": "French Pastry Essentials",
+    "description": "Master the art of French pastry with these classic recipes.",
+    "category": "Baking & Desserts",
+    "price": 20.0,
+    "difficulty": "Intermediate",
+    "prep_time": "45-90 mins",
+    "rating": 4.7,
+    "recipes_count": 24,
+    "ingredients_used": ["Butter", "Flour", "Eggs", "Chocolate"],
+    "popular_recipes": ["Croissants", "Macarons", "Tarte Tatin"],
+    "reviews": [
+      {
+        "user": "SweetTooth",
+        "comment": "Made perfect macarons on my first try!",
+        "rating": 4.9
+      }
+    ],
+    "chef": {
+      "name": "Claire Dubois",
+      "experience": "10 years",
+      "specialty": "French pastries",
+      "awards": ["Best Pastry Chef 2021"]
+    },
+    "url": "https://example.com/french-pastry"
+  },
+  {
+    "title": "Healthy Mediterranean Meals",
+    "description": "Nutritious and delicious Mediterranean diet recipes.",
+    "category": "Healthy Eating",
+    "price": 15.0,
+    "difficulty": "Beginner",
+    "prep_time": "20-45 mins",
+    "rating": 4.5,
+    "recipes_count": 35,
+    "ingredients_used": ["Olive Oil", "Chickpeas", "Feta", "Fresh Vegetables"],
+    "popular_recipes": ["Greek Salad", "Hummus", "Grilled Fish"],
+    "reviews": [
+      {
+        "user": "HealthNut",
+        "comment": "Great for meal prep!",
+        "rating": 4.6
+      }
+    ],
+    "chef": {
+      "name": "Elena Papadakis",
+      "experience": "7 years",
+      "specialty": "Mediterranean cuisine",
+      "awards": []
+    },
+    "url": "https://example.com/mediterranean-meals"
+  },
+  {
+    "title": "Vegan Comfort Food",
+    "description": "Plant-based versions of all your favorite comfort foods.",
+    "category": "Healthy Eating",
+    "price": 17.5,
+    "difficulty": "Intermediate",
+    "prep_time": "30-60 mins",
+    "rating": 4.4,
+    "recipes_count": 40,
+    "ingredients_used": ["Tofu", "Nutritional Yeast", "Beans", "Plant Milk"],
+    "popular_recipes": [
+      "Vegan Mac & Cheese",
+      "Mushroom Burgers",
+      "Lentil Shepherd's Pie"
+    ],
+    "reviews": [
+      {
+        "user": "PlantBased",
+        "comment": "Even my meat-loving husband enjoys these!",
+        "rating": 4.7
+      }
+    ],
+    "chef": {
+      "name": "Jamie Green",
+      "experience": "5 years",
+      "specialty": "Vegan cuisine",
+      "awards": ["Best Vegan Chef 2023"]
+    },
+    "url": "https://example.com/vegan-comfort-food"
+  },
+  {
+    "title": "Authentic Thai Curries",
+    "description": "Learn to make authentic Thai curries from scratch.",
+    "category": "Asian Cuisine",
+    "price": 19.0,
+    "difficulty": "Intermediate",
+    "prep_time": "40-75 mins",
+    "rating": 4.8,
+    "recipes_count": 22,
+    "ingredients_used": ["Coconut Milk", "Thai Basil", "Lemongrass", "Chilies"],
+    "popular_recipes": ["Green Curry", "Massaman Curry", "Tom Yum Soup"],
+    "reviews": [
+      {
+        "user": "CurryLover",
+        "comment": "The green curry recipe is amazing!",
+        "rating": 5
+      }
+    ],
+    "chef": {
+      "name": "Somsak Thongdee",
+      "experience": "12 years",
+      "specialty": "Thai cuisine",
+      "awards": ["Thai Chef Award 2020"]
+    },
+    "url": "https://example.com/thai-curries"
+  },
+  {
+    "title": "Artisan Bread Baking",
+    "description": "From sourdough to baguettes - master bread baking at home.",
+    "category": "Baking & Desserts",
+    "price": 21.0,
+    "difficulty": "Advanced",
+    "prep_time": "120-240 mins",
+    "rating": 4.9,
+    "recipes_count": 18,
+    "ingredients_used": ["Flour", "Water", "Salt", "Yeast"],
+    "popular_recipes": ["Sourdough", "Baguettes", "Ciabatta"],
+    "reviews": [
+      {
+        "user": "BreadBaker",
+        "comment": "Changed my bread game completely!",
+        "rating": 5
+      }
+    ],
+    "chef": {
+      "name": "Thomas Müller",
+      "experience": "20 years",
+      "specialty": "Artisan bread",
+      "awards": ["Master Baker"]
+    },
+    "url": "https://example.com/artisan-bread"
+  },
+  {
+    "title": "Roman Classics",
+    "description": "Authentic recipes from the heart of Rome.",
+    "category": "Italian Cuisine",
+    "price": 16.5,
+    "difficulty": "Intermediate",
+    "prep_time": "45-90 mins",
+    "rating": 4.7,
+    "recipes_count": 25,
+    "ingredients_used": ["Pecorino", "Guanciale", "Artichokes", "Semolina"],
+    "popular_recipes": ["Cacio e Pepe", "Carciofi alla Romana", "Supplì"],
+    "reviews": [
+      {
+        "user": "RomanFoodie",
+        "comment": "Tastes just like in Rome!",
+        "rating": 4.8
+      }
+    ],
+    "chef": {
+      "name": "Giulia Rossi",
+      "experience": "10 years",
+      "specialty": "Roman cuisine",
+      "awards": []
+    },
+    "url": "https://example.com/roman-classics"
+  },
+  {
+    "title": "Keto Meal Prep",
+    "description": "Delicious keto-friendly meals for the whole week.",
+    "category": "Healthy Eating",
+    "price": 18.0,
+    "difficulty": "Beginner",
+    "prep_time": "30-60 mins",
+    "rating": 4.6,
+    "recipes_count": 30,
+    "ingredients_used": ["Avocado", "Cheese", "Meats", "Leafy Greens"],
+    "popular_recipes": [
+      "Keto Lasagna",
+      "Fathead Pizza",
+      "Cheeseburger Casserole"
+    ],
+    "reviews": [
+      {
+        "user": "KetoQueen",
+        "comment": "Made sticking to keto so much easier!",
+        "rating": 4.9
+      }
+    ],
+    "chef": {
+      "name": "Mark Wilson",
+      "experience": "6 years",
+      "specialty": "Keto cooking",
+      "awards": []
+    },
+    "url": "https://example.com/keto-meal-prep"
+  },
+  {
+    "title": "Chinese Takeout at Home",
+    "description": "Make your favorite takeout dishes healthier at home.",
+    "category": "Asian Cuisine",
+    "price": 17.0,
+    "difficulty": "Intermediate",
+    "prep_time": "30-60 mins",
+    "rating": 4.5,
+    "recipes_count": 28,
+    "ingredients_used": [
+      "Soy Sauce",
+      "Rice Vinegar",
+      "Sesame Oil",
+      "Five Spice"
+    ],
+    "popular_recipes": [
+      "General Tso's Chicken",
+      "Beef with Broccoli",
+      "Egg Fried Rice"
+    ],
+    "reviews": [
+      {
+        "user": "TakeoutLover",
+        "comment": "Better than my local Chinese place!",
+        "rating": 4.7
+      }
+    ],
+    "chef": {
+      "name": "Ling Wong",
+      "experience": "8 years",
+      "specialty": "Chinese-American cuisine",
+      "awards": []
+    },
+    "url": "https://example.com/chinese-takeout"
+  },
+  {
+    "title": "French Bistro Classics",
+    "description": "Recreate your favorite French bistro dishes at home.",
+    "category": "French Cuisine",
+    "price": 22.0,
+    "difficulty": "Intermediate",
+    "prep_time": "45-90 mins",
+    "rating": 4.8,
+    "recipes_count": 20,
+    "ingredients_used": ["Butter", "Wine", "Herbs", "Cream"],
+    "popular_recipes": ["Coq au Vin", "Boeuf Bourguignon", "Tarte Flambée"],
+    "reviews": [
+      {
+        "user": "BistroFan",
+        "comment": "Transporting me to Paris!",
+        "rating": 5
+      }
+    ],
+    "chef": {
+      "name": "Antoine Laurent",
+      "experience": "12 years",
+      "specialty": "Bistro cuisine",
+      "awards": ["Best Bistro Chef 2022"]
+    },
+    "url": "https://example.com/french-bistro"
+  }
+]
