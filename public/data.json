@@ -27,7 +27,7 @@
       "specialty": "Italian cuisine",
       "awards": ["Italian Chef of the Year 2022"]
     },
-    "url": "https://example.com/italian-pasta-recipes"
+    "url": "https://img.freepik.com/free-photo/pasta-with-cheese-topped-with-basil_140725-3803.jpg"
   },
   {
     "title": "Japanese Sushi Masterclass",
@@ -53,7 +53,7 @@
       "specialty": "Japanese cuisine",
       "awards": ["Master Sushi Chef"]
     },
-    "url": "https://example.com/sushi-masterclass"
+    "url": "https://img.freepik.com/free-photo/sushi-set-with-avocado-salmon-crab-sesame-seeds-soy-sauce_141793-17599.jpg"
   },
   {
     "title": "French Pastry Essentials",
@@ -79,7 +79,7 @@
       "specialty": "French pastries",
       "awards": ["Best Pastry Chef 2021"]
     },
-    "url": "https://example.com/french-pastry"
+    "url": "https://img.freepik.com/free-photo/delicious-cake-with-strawberries_23-2148972059.jpg"
   },
   {
     "title": "Healthy Mediterranean Meals",
@@ -105,7 +105,7 @@
       "specialty": "Mediterranean cuisine",
       "awards": []
     },
-    "url": "https://example.com/mediterranean-meals"
+    "url": "https://img.freepik.com/free-photo/top-view-food-arrangement-wooden-background_23-2148287541.jpg"
   },
   {
     "title": "Vegan Comfort Food",
@@ -135,7 +135,7 @@
       "specialty": "Vegan cuisine",
       "awards": ["Best Vegan Chef 2023"]
     },
-    "url": "https://example.com/vegan-comfort-food"
+    "url": "https://img.freepik.com/free-photo/assortment-delicious-food-ingredients_23-2148869896.jpg"
   },
   {
     "title": "Authentic Thai Curries",
@@ -161,7 +161,7 @@
       "specialty": "Thai cuisine",
       "awards": ["Thai Chef Award 2020"]
     },
-    "url": "https://example.com/thai-curries"
+    "url": "https://img.freepik.com/free-photo/rice-noodles-bowl-curry-paste-with-chili-cucumber-long-bean-lime-garlic-spring-onion_1150-27062.jpg"
   },
   {
     "title": "Artisan Bread Baking",
@@ -187,7 +187,7 @@
       "specialty": "Artisan bread",
       "awards": ["Master Baker"]
     },
-    "url": "https://example.com/artisan-bread"
+    "url": "https://img.freepik.com/free-photo/different-types-bread-made-from-wheat-flour_140725-5648.jpg"
   },
   {
     "title": "Roman Classics",
@@ -213,7 +213,7 @@
       "specialty": "Roman cuisine",
       "awards": []
     },
-    "url": "https://example.com/roman-classics"
+    "url": "https://img.freepik.com/free-photo/tasty-food-assortment-flat-lay_23-2148941531.jpg"
   },
   {
     "title": "Keto Meal Prep",
@@ -243,7 +243,7 @@
       "specialty": "Keto cooking",
       "awards": []
     },
-    "url": "https://example.com/keto-meal-prep"
+    "url": "https://img.freepik.com/free-photo/top-view-healthy-diet-salad-with-grilled-chicken-broccoli-cauliflower-tomato-lettuce-avocado-lettuce_141793-2438.jpg"
   },
   {
     "title": "Chinese Takeout at Home",
@@ -278,7 +278,7 @@
       "specialty": "Chinese-American cuisine",
       "awards": []
     },
-    "url": "https://example.com/chinese-takeout"
+    "url": "https://img.freepik.com/free-photo/pre-prepared-food-showcasing-ready-eat-delicious-meals-go_23-2151187802.jpg"
   },
   {
     "title": "French Bistro Classics",
@@ -304,6 +304,6 @@
       "specialty": "Bistro cuisine",
       "awards": ["Best Bistro Chef 2022"]
     },
-    "url": "https://example.com/french-bistro"
+    "url": "https://img.freepik.com/free-photo/high-angle-table-arrangement-with-delicious-food_23-2149617138.jpg"
   }
 ]
