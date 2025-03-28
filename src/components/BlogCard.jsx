@@ -36,7 +36,15 @@ const BlogCard = ({ blog }) => {
         </small>
       </p>
       <div className="my-1.5 flex items-center gap-2">
-        Rating: <Rating className="bg-gray-200/20 rounded px-1 py-0.5" name="" value={rating} precision={0.5} size="small" readOnly />
+        Rating:{" "}
+        <Rating
+          className="bg-gray-200/20 rounded px-1 py-0.5"
+          name=""
+          value={rating}
+          precision={0.5}
+          size="small"
+          readOnly
+        />
       </div>
       <div className="my-1 flex items-center justify-center gap-2">
         <Tooltip
@@ -46,7 +54,6 @@ const BlogCard = ({ blog }) => {
           }}
         >
           <button
-            title="Click to see details"
             className="p-3 rounded-full bg-gray-500/30 cursor-pointer hover:bg-gray-400/50"
           >
             <FaArrowRightLong />
