@@ -9,9 +9,11 @@ const LoginPage = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
+
     const formData = new FormData(e.target);
     const { email, password } = Object.fromEntries(formData.entries());
     console.log(email, password);
+    
     login(email, password)
       .then(() => {
         toast.success("User logged in successfully!");

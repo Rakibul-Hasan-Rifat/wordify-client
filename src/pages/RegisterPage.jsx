@@ -1,5 +1,4 @@
 import { Button } from "@mui/material";
-import React from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router";
 import useAuth from "../hooks/useAuth";
