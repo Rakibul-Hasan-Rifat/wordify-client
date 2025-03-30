@@ -13,37 +13,40 @@ import WishlistPage from "./pages/WishlistPage.jsx";
 import AuthProvider from "./providers/AuthProvider.jsx";
 import FeaturedBlogsPage from "./pages/FeaturedBlogsPage.jsx";
 import PrivateRoute from "./routes/PrivateRoute.jsx";
+import DataProvider from "./providers/DataProvider.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <AuthProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<MainLayout />}>
-            <Route index element={<HomePage />} />
-            <Route
-              path="/add-blog"
-              element={
-                <PrivateRoute>
-                  <AddBlogPage />
-                </PrivateRoute>
-              }
-            />
-            <Route path="/all-blogs" element={<AllBlogsPage />} />
-            <Route path="/featured-blogs" element={<FeaturedBlogsPage />} />
-            <Route
-              path="/wishlist"
-              element={
-                <PrivateRoute>
-                  <WishlistPage />
-                </PrivateRoute>
-              }
-            />
-            <Route path="/register" element={<RegisterPage />} />
-            <Route path="/login" element={<LoginPage />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </AuthProvider>
+    <BrowserRouter>
+      <AuthProvider>
+        <DataProvider>
+          <Routes>
+            <Route path="/" element={<MainLayout />}>
+              <Route index element={<HomePage />} />
+              <Route
+                path="/add-blog"
+                element={
+                  <PrivateRoute>
+                    <AddBlogPage />
+                  </PrivateRoute>
+                }
+              />
+              <Route path="/all-blogs" element={<AllBlogsPage />} />
+              <Route path="/featured-blogs" element={<FeaturedBlogsPage />} />
+              <Route
+                path="/wishlist"
+                element={
+                  <PrivateRoute>
+                    <WishlistPage />
+                  </PrivateRoute>
+                }
+              />
+              <Route path="/register" element={<RegisterPage />} />
+              <Route path="/login" element={<LoginPage />} />
+            </Route>
+          </Routes>
+        </DataProvider>
+      </AuthProvider>
+    </BrowserRouter>
   </StrictMode>
 );

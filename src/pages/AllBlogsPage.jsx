@@ -1,7 +1,16 @@
-const AllBlogsPage = () => {
-  return (
-    <div>AllBlogsPage</div>
-  )
-}
+import useBlogs from "../hooks/useBlogs";
+import BlogCard from "../components/BlogCard";
 
-export default AllBlogsPage
+const AllBlogsPage = () => {
+  const blogs = useBlogs();
+  console.log(blogs);
+  return (
+    <div className="grid grid-cols-3 gap-3">
+      {blogs.map((blog, indx) => (
+        <BlogCard key={indx} blog={blog} />
+      ))}
+    </div>
+  );
+};
+
+export default AllBlogsPage;

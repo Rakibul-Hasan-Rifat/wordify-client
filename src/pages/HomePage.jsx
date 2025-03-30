@@ -1,21 +1,12 @@
-import { useEffect, useState } from "react";
-import usePublicAxios from "../hooks/usePublicAxios";
 import BlogCard from "../components/BlogCard";
+import useBlogs from "../hooks/useBlogs";
 
 const HomePage = () => {
-  const [blogs, setBlogs] = useState([]);
-  const publicAxiosInstance = usePublicAxios();
-
-  useEffect(() => {
-    publicAxiosInstance.get("./data.json").then(({ data }) => {
-      setBlogs(data);
-    });
-  }, [publicAxiosInstance]);
-  console.log(blogs);
+  const blogs = useBlogs();
 
   return (
     <div className="grid grid-cols-3 gap-3">
-      {blogs.map((blog, indx) => (
+      {blogs.slice(0, 6).map((blog, indx) => (
         <BlogCard key={indx} blog={blog} />
       ))}
     </div>
