@@ -1,6 +1,7 @@
-import { Rating, Tooltip, Zoom } from "@mui/material";
+import { Link } from "react-router";
 import { FaHeart } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { Rating, Tooltip, Zoom } from "@mui/material";
 
 const BlogCard = ({ blog }) => {
   console.log(blog);
@@ -9,8 +10,7 @@ const BlogCard = ({ blog }) => {
     <div
       className="border rounded-2xl text-white p-4 bg-cover bg-center "
       style={{
-        backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),url(${url})`,
-        backgroundSize: "",
+        backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(${url})`,
       }}
     >
       <p className="flex justify-between">
@@ -53,11 +53,11 @@ const BlogCard = ({ blog }) => {
             transition: Zoom,
           }}
         >
-          <button
-            className="p-3 rounded-full bg-gray-500/30 cursor-pointer hover:bg-gray-400/50"
-          >
-            <FaArrowRightLong />
-          </button>
+          <Link to={`/all-blogs/${blog?._id}`}>
+            <button className="p-3 rounded-full bg-gray-500/30 cursor-pointer hover:bg-gray-400/50">
+              <FaArrowRightLong />
+            </button>
+          </Link>
         </Tooltip>
         <Tooltip title="ADD TO WISHLIST">
           <button className="p-3 rounded-full bg-gray-500/30 cursor-pointer hover:bg-gray-400/50">

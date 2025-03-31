@@ -15,7 +15,11 @@ const DataProvider = ({ children }) => {
     fetchData();
   }, []);
 
-  return <DataContext.Provider value={blogs}>{children}</DataContext.Provider>;
+  return (
+    <DataContext.Provider value={{ blogs, setBlogs }}>
+      {children}
+    </DataContext.Provider>
+  );
 };
 
 export default DataProvider;

@@ -10,10 +10,10 @@ import AddBlogPage from "./pages/AddBlogPage.jsx";
 import AllBlogsPage from "./pages/AllBlogsPage.jsx";
 import RegisterPage from "./pages/RegisterPage.jsx";
 import WishlistPage from "./pages/WishlistPage.jsx";
-import AuthProvider from "./providers/AuthProvider.jsx";
-import FeaturedBlogsPage from "./pages/FeaturedBlogsPage.jsx";
 import PrivateRoute from "./routes/PrivateRoute.jsx";
+import AuthProvider from "./providers/AuthProvider.jsx";
 import DataProvider from "./providers/DataProvider.jsx";
+import FeaturedBlogsPage from "./pages/FeaturedBlogsPage.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
