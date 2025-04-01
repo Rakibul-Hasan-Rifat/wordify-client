@@ -6,14 +6,12 @@ const AllBlogsPage = () => {
   const { blogs } = useBlogs();
   const [searchBlogs, setSearchBlogs] = useState([]);
 
-  useEffect(() => {
-    setSearchBlogs(blogs)
-  }, [blogs])
+  useEffect(() => setSearchBlogs(blogs), [blogs]);
 
   console.log(blogs, searchBlogs);
 
   const handleSearch = (e) => {
-    console.log(e.target.value);
+    
     const fetchData = async () => {
       const response = await fetch(
         `${import.meta.env.VITE_server_url}/search-blogs?text=${e.target.value}`

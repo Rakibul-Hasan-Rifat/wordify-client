@@ -14,6 +14,7 @@ import PrivateRoute from "./routes/PrivateRoute.jsx";
 import AuthProvider from "./providers/AuthProvider.jsx";
 import DataProvider from "./providers/DataProvider.jsx";
 import FeaturedBlogsPage from "./pages/FeaturedBlogsPage.jsx";
+import BlogDetails from "./components/BlogDetails.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -31,7 +32,10 @@ createRoot(document.getElementById("root")).render(
                   </PrivateRoute>
                 }
               />
-              <Route path="/all-blogs" element={<AllBlogsPage />} />
+              <Route path="/all-blogs">
+                <Route index element={<AllBlogsPage />} />
+                <Route path="/all-blogs/:blogId" element={<BlogDetails />} />
+              </Route>
               <Route path="/featured-blogs" element={<FeaturedBlogsPage />} />
               <Route
                 path="/wishlist"
