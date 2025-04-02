@@ -4,7 +4,6 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { Rating, Tooltip, Zoom } from "@mui/material";
 
 const BlogCard = ({ blog }) => {
-  console.log(blog);
   const { title, url, category, chef, prep_time, price, rating } = blog;
   return (
     <div
@@ -68,6 +67,5 @@ const BlogCard = ({ blog }) => {
     </div>
   );
 };
-// backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('https://example.com/your-image.jpg')`;
 
 export default BlogCard;

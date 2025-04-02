@@ -5,16 +5,35 @@ import { useEffect, useState } from "react";
 const AllBlogsPage = () => {
   const { blogs } = useBlogs();
   const [searchBlogs, setSearchBlogs] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [query, setQuery] = useState({ title: "", category: "" });
 
   useEffect(() => setSearchBlogs(blogs), [blogs]);
+  useEffect(() => {
+    const fetchCategories = async () => {
+      const response = await fetch(
+        `${import.meta.env.VITE_server_url}/distinct-category`
+      );
+      const categories = await response.json();
+      setCategories(categories);
+    };
 
-  console.log(blogs, searchBlogs);
+    fetchCategories();
+  }, []);
 
-  const handleSearch = (e) => {
-    
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    console.log(name, value);
+    setQuery((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+
     const fetchData = async () => {
       const response = await fetch(
-        `${import.meta.env.VITE_server_url}/search-blogs?text=${e.target.value}`
+        `${import.meta.env.VITE_server_url}/search-blogs?title=${
+          name === "title" ? e.target.value : query.title
+        }&category=${name === "category" ? e.target.value : query.category}`
       );
       const result = await response.json();
       setSearchBlogs(result);
@@ -25,10 +44,24 @@ const AllBlogsPage = () => {
 
   return (
     <>
-      <div className="my-5 flex justify-center sticky top-0">
+      <div className="my-5 flex justify-center gap-2 sticky top-0">
+        <select
+          name="category"
+          onChange={handleChange}
+          defaultValue={'Select One'}
+          className="px-4 py-2 bg-white border border-gray-300/70 outline-0 rounded"
+        >
+          <option disabled>
+            Select One
+          </option>
+          {categories?.map((category, idx) => (
+            <option key={idx} value={category}>{category}</option>
+          ))}
+        </select>
         <input
           type="text"
-          onChange={handleSearch}
+          name="title"
+          onChange={handleChange}
           placeholder="Type any text to search..."
           className="min-w-lg
            px-4 py-2 bg-white border border-gray-300/70 outline-0 rounded"
