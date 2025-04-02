@@ -2,9 +2,26 @@ import { Link } from "react-router";
 import { FaHeart } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { Rating, Tooltip, Zoom } from "@mui/material";
+import useAuth from "../hooks/useAuth";
 
 const BlogCard = ({ blog }) => {
-  const { title, url, category, chef, prep_time, price, rating } = blog;
+  const { user } = useAuth();
+  const { _id, title, url, category, chef, prep_time, price, rating } = blog;
+  console.log(user);
+
+  const handleWishlist = (id) => {
+
+    fetch(`${import.meta.env.VITE_server_url}/wish-list`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email: user?.email, blogId: id }),
+    })
+      .then((res) => res.json())
+      .then((result) => console.log(result));
+  };
+
   return (
     <div
       className="border rounded-2xl text-white p-4 bg-cover bg-center "
@@ -59,7 +76,10 @@ const BlogCard = ({ blog }) => {
           </Link>
         </Tooltip>
         <Tooltip title="ADD TO WISHLIST">
-          <button className="p-3 rounded-full bg-gray-500/30 cursor-pointer hover:bg-gray-400/50">
+          <button
+            onClick={() => handleWishlist(_id)}
+            className="p-3 rounded-full bg-gray-500/30 cursor-pointer hover:bg-gray-400/50"
+          >
             <FaHeart />
           </button>
         </Tooltip>
