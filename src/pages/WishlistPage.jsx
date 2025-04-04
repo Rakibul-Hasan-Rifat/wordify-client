@@ -6,7 +6,7 @@ import {
 } from "@tanstack/react-table";
 
 import useAuth from "../hooks/useAuth";
-import columns from "./../tanstackTable/columns";
+import wishlistColumns from "../tanstackTable/wishlistColumns";
 
 const WishlistPage = () => {
   const { user } = useAuth();
@@ -41,7 +41,7 @@ const WishlistPage = () => {
 
   const table = useReactTable({
     data: wishlistItems,
-    columns,
+    columns: wishlistColumns,
     getCoreRowModel: getCoreRowModel(),
   });
 

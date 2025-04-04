@@ -3,12 +3,12 @@ import DeleteBtn from "../components/DeleteBtn";
 import DetailsBtn from "../components/DetailsBtn";
 
 const columnHelper = createColumnHelper();
-const columns = [
+const wishlistColumns = [
   columnHelper.accessor("index", {
     header: () => "Index",
     cell: (props) => {
       console.log("mydata", props);
-      return props.row.id;
+      return Number(props.row.id) + 1;
     },
   }),
   columnHelper.accessor("url", {
@@ -45,4 +45,4 @@ const columns = [
   }),
 ];
 
-export default columns;
+export default wishlistColumns;
