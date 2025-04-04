@@ -1,8 +1,9 @@
+import { useEffect } from "react";
 
 const FeaturedBlogsPage = () => {
-  return (
-    <div>FeaturedBlogsPage</div>
-  )
-}
+  useEffect(() => {}, []);
 
-export default FeaturedBlogsPage
+  return <div>FeaturedBlogsPage</div>;
+};
+
+export default FeaturedBlogsPage;

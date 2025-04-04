@@ -7,11 +7,10 @@ import useAuth from "../hooks/useAuth";
 const BlogCard = ({ blog }) => {
   const { user } = useAuth();
   const { _id, title, url, category, chef, prep_time, price, rating } = blog;
-  console.log(user);
 
   const handleWishlist = (id) => {
 
-    fetch(`${import.meta.env.VITE_server_url}/wish-list`, {
+    fetch(`${import.meta.env.VITE_server_url}/wish-list/${user?.email}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
