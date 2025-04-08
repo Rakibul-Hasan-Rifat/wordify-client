@@ -1,8 +1,9 @@
-import { useParams } from "react-router";
+import { Link, useParams } from "react-router";
 import { useEffect, useState } from "react";
 import { MdWatchLater } from "react-icons/md";
 import { CiCircleList } from "react-icons/ci";
 import { GiCampCookingPot } from "react-icons/gi";
+import { Button } from "@mui/material";
 
 const BlogDetails = () => {
   const { blogId } = useParams();
@@ -23,6 +24,7 @@ const BlogDetails = () => {
   console.log(blogDetails);
 
   const {
+    _id,
     url,
     chef,
     title,
@@ -40,7 +42,11 @@ const BlogDetails = () => {
   return (
     <div className="max-w-2xl mx-auto p-3 bg-gray-300/40 rounded-2xl overflow-hidden shadow-xl">
       <div className="relative">
-        <img src={url} alt="" className="w-full object-cover object-center rounded-xl" />
+        <img
+          src={url}
+          alt=""
+          className="w-full object-cover object-center rounded-xl"
+        />
         <h2 className="w-3/4 mx-auto absolute top-1/2 left-1/2 -translate-1/2 py-5 px-5 rounded-br-full rounded-tl-full bg-blue-400 text-white text-4xl text-center font-semibold">
           {title}
           <p className="absolute bottom-[100%] right-0 bg-gray-800/70 text-white text-sm font- px-3 py-1 rounded-3xl">
@@ -71,8 +77,35 @@ const BlogDetails = () => {
           <span className="text-2xl">{recipes_count}</span>
         </p>
       </div>
+      <div className="flex justify-center gap-2 bg-white rounded py-3 px-1">
+        <ul className="text-right">
+          <h4 className="font-semibold">Popular Recipes</h4>
+          {popular_recipes?.map((recipe, idx) => (
+            <li key={idx}>{recipe}</li>
+          ))}
+        </ul>
+        <div className="flex flex-col items-end justify-end">
+          {popular_recipes?.length === ingredients_used?.length ||
+          popular_recipes?.length > ingredients_used?.length
+            ? popular_recipes?.map((_, i) => <span key={i}>✅</span>)
+            : ingredients_used?.map((_, i) => <span key={i}>✅</span>)}
+        </div>
+        <ul>
+          <h4 className="font-semibold">Ingredients</h4>
+          {ingredients_used?.map((ingredient, idx) => (
+            <li key={idx}>{ingredient}</li>
+          ))}
+        </ul>
+      </div>
       <div className="my-3">
         <p>{description}</p>
+      </div>
+      <div>
+        <Link to={`/all-blogs/update/${_id}`}>
+          <Button size="large" variant="contained" className="w-full">
+            Update
+          </Button>
+        </Link>
       </div>
     </div>
   );

@@ -15,6 +15,7 @@ import AuthProvider from "./providers/AuthProvider.jsx";
 import DataProvider from "./providers/DataProvider.jsx";
 import FeaturedBlogsPage from "./pages/FeaturedBlogsPage.jsx";
 import BlogDetails from "./components/BlogDetails.jsx";
+import UpdatePage from "./pages/UpdatePage.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -35,6 +36,7 @@ createRoot(document.getElementById("root")).render(
               <Route path="/all-blogs">
                 <Route index element={<AllBlogsPage />} />
                 <Route path="/all-blogs/:blogId" element={<BlogDetails />} />
+                <Route path="/all-blogs/update/:blogId" element={<UpdatePage />} />
               </Route>
               <Route path="/featured-blogs" element={<FeaturedBlogsPage />} />
               <Route

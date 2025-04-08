@@ -26,7 +26,7 @@ const LoginPage = () => {
       <h2 className="text-3xl text-center text-gray-500 font-semibold mb-5">
         LOGIN
       </h2>
-      <form onSubmit={handleLogin} className=" flex flex-col gap-2">
+      <form onSubmit={handleLogin} className="flex flex-col gap-2">
         <input
           type="email"
           name="email"
