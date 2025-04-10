@@ -14,8 +14,8 @@ const AllBlogsPage = () => {
       const response = await fetch(
         `${import.meta.env.VITE_server_url}/distinct-category`
       );
-      const categories = await response.json();
-      setCategories(categories);
+      const distinctCategories = await response.json();
+      setCategories(distinctCategories);
     };
 
     fetchCategories();
@@ -48,14 +48,14 @@ const AllBlogsPage = () => {
         <select
           name="category"
           onChange={handleChange}
-          defaultValue={'Select One'}
+          defaultValue={"Select One"}
           className="px-4 py-2 bg-white border border-gray-300/70 outline-0 rounded"
         >
-          <option disabled>
-            Select One
-          </option>
+          <option disabled>Select One</option>
           {categories?.map((category, idx) => (
-            <option key={idx} value={category}>{category}</option>
+            <option key={idx} value={category}>
+              {category}
+            </option>
           ))}
         </select>
         <input
