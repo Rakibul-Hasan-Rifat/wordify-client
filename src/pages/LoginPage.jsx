@@ -5,7 +5,7 @@ import useAuth from "../hooks/useAuth";
 import toast from "react-hot-toast";
 
 const LoginPage = () => {
-  const { login } = useAuth();
+  const { login, googleLogin } = useAuth();
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -13,12 +13,18 @@ const LoginPage = () => {
     const formData = new FormData(e.target);
     const { email, password } = Object.fromEntries(formData.entries());
     console.log(email, password);
-    
+
     login(email, password)
       .then(() => {
         toast.success("User logged in successfully!");
       })
       .catch((err) => console.log(err.message));
+  };
+
+  const handleGoogleLogin = () => {
+    googleLogin()
+      .then(() => toast.success("User is logged in successfully by Google"))
+      .catch((err) => toast.error(err.message));
   };
 
   return (
@@ -53,7 +59,10 @@ const LoginPage = () => {
         </Link>
       </p>
       <div className="flex items-center justify-center">
-        <button className="px-2 py-1 flex justify-between items-center gap-2.5 border border-gray-400 rounded-3xl cursor-pointer">
+        <button
+          onClick={handleGoogleLogin}
+          className="px-2 py-1 flex justify-between items-center gap-2.5 border border-gray-400 rounded-3xl cursor-pointer"
+        >
           <FcGoogle />
           <span>Google Login</span>
         </button>

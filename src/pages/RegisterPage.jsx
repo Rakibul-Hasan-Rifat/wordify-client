@@ -5,7 +5,7 @@ import useAuth from "../hooks/useAuth";
 import toast from "react-hot-toast";
 
 const RegisterPage = () => {
-  const { register, updateUser } = useAuth();
+  const { register, updateUser, googleLogin } = useAuth();
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -28,6 +28,12 @@ const RegisterPage = () => {
       .catch((err) => {
         console.log(err.message);
       });
+  };
+
+  const handleGoogleRegister = () => {
+    googleLogin()
+      .then(() => toast.success("User is registered successfully by Google"))
+      .catch((err) => toast.error(err.message));
   };
 
   return (
@@ -74,7 +80,10 @@ const RegisterPage = () => {
         </Link>
       </p>
       <div className="flex items-center justify-center">
-        <button className="px-2 py-1 flex justify-between items-center gap-2.5 border border-gray-400 rounded-3xl cursor-pointer">
+        <button
+          onClick={handleGoogleRegister}
+          className="px-2 py-1 flex justify-between items-center gap-2.5 border border-gray-400 rounded-3xl cursor-pointer"
+        >
           <FcGoogle />
           <span>Google Login</span>
         </button>
